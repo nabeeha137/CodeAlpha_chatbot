@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>FAQ Chatbot — CodeAlpha Task </title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div id="wrap">
+
+    <!-- ===== SIDEBAR ===== -->
+    <div id="sidebar">
+      <div id="sb-top">
+
+        <!-- Logo -->
+        <div id="sb-logo">
+          <div class="icon-wrap">
+            <i class="fa-solid fa-brain"></i>
+          </div>
+          <span>AskAI</span>
+        </div>
+
+        <!-- Topics -->
+        <div class="sb-label">Topics</div>
+        <div class="nav-item active" onclick="setTopic('all', this)">
+          <i class="fa-solid fa-border-all"></i> All Topics
+        </div>
+        <div class="nav-item" onclick="setTopic('ai', this)">
+          <i class="fa-solid fa-microchip"></i> Artificial Intelligence
+        </div>
+        <div class="nav-item" onclick="setTopic('ml', this)">
+          <i class="fa-solid fa-chart-simple"></i> Machine Learning
+        </div>
+        <div class="nav-item" onclick="setTopic('python', this)">
+          <i class="fa-brands fa-python"></i> Python
+        </div>
+        <div class="nav-item" onclick="setTopic('career', this)">
+          <i class="fa-solid fa-briefcase"></i> Career
+        </div>
+        <div class="nav-item" onclick="setTopic('general', this)">
+          <i class="fa-solid fa-globe"></i> General Tech
+        </div>
+
+      </div>
+
+      <!-- Stats -->
+      <div id="sb-stats">
+        <div class="stat-row">
+          <span>FAQs loaded</span>
+          <span id="faq-count">15</span>
+        </div>
+        <div class="stat-row">
+          <span>Questions asked</span>
+          <span id="q-count">0</span>
+        </div>
+        <div class="stat-row">
+          <span>Matched</span>
+          <span id="m-count">0</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- ===== MAIN CHAT ===== -->
+    <div id="main">
+
+      <!-- Top bar -->
+      <div id="topbar">
+        <div class="avatar">
+          <i class="fa-solid fa-robot"></i>
+        </div>
+        <div class="meta">
+          <h3>FAQ Assistant</h3>
+          <p>CodeAlpha Internship — Task </p>
+        </div>
+        <div class="online-pill">
+          <span class="dot"></span> Online
+        </div>
+      </div>
+
+      <!-- Messages -->
+      <div id="msgs">
+        <div class="msg bot">
+          <div class="msg-icon"><i class="fa-solid fa-robot"></i></div>
+          <div>
+            <div class="bubble">
+              Hello! I'm your AI FAQ Assistant. Ask me anything about
+              Artificial Intelligence, Machine Learning, Python, or tech careers!
+            </div>
+            <div class="sugg-row">
+              <button class="sq" onclick="quickAsk('What is Artificial Intelligence?')">What is AI?</button>
+              <button class="sq" onclick="quickAsk('How do I learn Machine Learning?')">Learn ML</button>
+              <button class="sq" onclick="quickAsk('Is Python good for beginners?')">Python basics</button>
+              <button class="sq" onclick="quickAsk('How to build a career in AI?')">AI career</button>
+            </div>
+            <div class="ts" id="welcome-ts"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input -->
+      <div id="input-row">
+        <textarea id="uinput" placeholder="Ask a question..." rows="1"></textarea>
+        <button id="sbtn" onclick="sendMsg()" aria-label="Send message">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+
+    </div>
+  </div>
+
+  <script src="faq.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
