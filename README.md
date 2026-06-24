@@ -96,14 +96,6 @@ Display answer + confidence badge + related question suggestions
 
 ---
 
-## 👨‍💻 Author
-
-**[Your Name]**
-CodeAlpha AI Internship
-[Your LinkedIn] | [Your GitHub]
-
----
-
 ## 🏢 About CodeAlpha
 
 CodeAlpha is a leading software development company providing internship opportunities in AI, Web Development, and more.
